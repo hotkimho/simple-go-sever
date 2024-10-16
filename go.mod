@@ -1,3 +1,3 @@
 module github.com/hotkimho/simple-go-server
 
-go 1.22.4
+go 1.20.0
