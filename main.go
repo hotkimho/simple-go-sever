@@ -27,7 +27,7 @@ func main() {
 		logLevel = "info(default value)"
 	}
 
-	fmt.Println("trigger test webhook")
+	fmt.Println("trigger test webhook2")
 	fmt.Printf("PORT: %s\n", port)
 	fmt.Printf("CORS_ORIGIN: %s\n", corsOrigin)
 	fmt.Printf("DEBUG_MODE: %s\n", debugMode)
