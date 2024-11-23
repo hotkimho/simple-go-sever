@@ -17,6 +17,17 @@ func main() {
 	debugMode := os.Getenv("DEBUG_MODE")
 	logLevel := os.Getenv("LOG_LEVEL")
 
+	if corsOrigin == "" {
+		corsOrigin = "*(default value)"
+	}
+	if debugMode == "" {
+		debugMode = "false(default value)"
+	}
+	if logLevel == "" {
+		logLevel = "info(default value)"
+	}
+
+	fmt.Println("trigger test-2")
 	fmt.Printf("PORT: %s\n", port)
 	fmt.Printf("CORS_ORIGIN: %s\n", corsOrigin)
 	fmt.Printf("DEBUG_MODE: %s\n", debugMode)
