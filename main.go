@@ -23,7 +23,12 @@ func main() {
 	fmt.Printf("LOG_LEVEL: %s\n", logLevel)
 
 	http.HandleFunc("/test", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Test")
+		fmt.Fprintf(w, "Test2222")
+		// content-type값이 application/json으로 설정하고 chartset=utf-8 설정 삭제
+		w.Header().Del("Content-Type")
+		w.Header().Set("Content-Type", "application/json")
+
+		w.WriteHeader(http.StatusOK)
 	})
 
 	log.Printf("Starting server on port %s...", port)
