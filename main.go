@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 )
 
 func main() {
@@ -12,7 +13,12 @@ func main() {
 	if port == "" {
 		port = "8080"
 	}
-
+	a := ""
+	b, err := strconv.Atoi(a)
+	if err != nil {
+		fmt.Println("error ", err)
+	}
+	fmt.Println("b : ", b)
 	corsOrigin := os.Getenv("CORS_ORIGIN")
 	debugMode := os.Getenv("DEBUG_MODE")
 	logLevel := os.Getenv("LOG_LEVEL")
@@ -27,7 +33,7 @@ func main() {
 		logLevel = "info(default value)"
 	}
 
-	fmt.Println("trigger test-2")
+	fmt.Println("trigger test-3")
 	fmt.Printf("PORT: %s\n", port)
 	fmt.Printf("CORS_ORIGIN: %s\n", corsOrigin)
 	fmt.Printf("DEBUG_MODE: %s\n", debugMode)
