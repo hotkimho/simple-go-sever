@@ -33,14 +33,15 @@ func main() {
 		logLevel = "info(default value)"
 	}
 
-	fmt.Println("trigger test-4")
+	
+	fmt.Println("trigger test-5")
 	fmt.Printf("PORT: %s\n", port)
 	fmt.Printf("CORS_ORIGIN: %s\n", corsOrigin)
 	fmt.Printf("DEBUG_MODE: %s\n", debugMode)
 	fmt.Printf("LOG_LEVEL: %s\n", logLevel)
 
 	http.HandleFunc("/test", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Test 9")
+		fmt.Fprintf(w, "Test 11")
 		// content-type값이 application/json으로 설정하고 chartset=utf-8 설정 삭제
 		w.Header().Del("Content-Type")
 		w.Header().Set("Content-Type", "application/json")
