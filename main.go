@@ -33,6 +33,7 @@ func main() {
 		logLevel = "info(default value)"
 	}
 
+	
 	fmt.Println("trigger test-5")
 	fmt.Printf("PORT: %s\n", port)
 	fmt.Printf("CORS_ORIGIN: %s\n", corsOrigin)
